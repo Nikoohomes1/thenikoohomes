@@ -377,6 +377,19 @@ p.large-paragraph {
     }
 }
 
+@media  (max-width:767px){
+    #laptop_view{
+        display: none;
+    }
+}
+
+@media  (min-width:768px)
+{
+    #mobile_view{
+        display: none;
+    }
+}
+
 @media all and (max-width:767px){
     .footer-call{
         background-color: #e44e2f;
