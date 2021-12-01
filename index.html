@@ -57,17 +57,16 @@
       </div>
       <h1 style=" margin-top: 15px;font-size: 26px; font-family: 'Nunito',sans-serif; font-weight: 600;" > Express your interest </h1>
         <form style="border: 0px;" action="https://formsubmit.co/af10f9c95ca6c96ad39357a0090f22c2" method="post" >
-
         
         <div class="input-icons" style="margin-top: 05px;">
         <i class="fa fa-user icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
         <input class="input-field" name="Name" style="border-radius: 0px; padding-left: 48px; background-color: #dedede; color: #d63031; margin-top: 20px;" placeholder="Name" type="text" >
         <i class="fa fa-phone icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px; padding-left: 10px; transform: rotate(180deg);"></i>
-        <input id="call" name="contact no" placeholder="Contact No" type="text" style="padding-left: 48px; border-radius: 0px; background-color: #dedede;  color: #d63031;margin-top: 20px;">
+        <input id="call"  name="contact no"  pattern="[1-9]{1}[0-9]{9}" placeholder="Contact No" type="text" style="padding-left: 48px; border-radius: 0px; background-color: #dedede;  color: #d63031;margin-top: 20px;">
         <i class="fa fa-envelope icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
         <input id="email" name="email" placeholder="Email" type="text" style="border-radius: 0px; padding-left: 48px; background-color: #dedede;  color: #d63031; margin-top: 20px;" placeholder="Name" type="text">
         
-        <button href="javascript:%20check_empty()" id="submit" class="rounded" style="margin-top: 25px; background-color: #e74c3c; ">Send</a>
+        <button href="javascript:%20check_empty()" id="submit" class="rounded" style="margin-top: 25px; background-color: #e74c3c;" >Send</a>
         </form>
         </div>
         </div>
@@ -90,11 +89,11 @@
           <i class="fa fa-user icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
           <input name="Name" class="input-field" style="border-radius: 0px; padding-left: 48px; background-color: #dedede; color: #d63031; margin-top: 20px;" placeholder="Name" type="text">
           <i class="fa fa-phone icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px; padding-left: 10px; transform: rotate(180deg);"></i>
-          <input id="call" name="Contact No" placeholder="Contact No" type="text" style="padding-left: 48px; border-radius: 0px; background-color: #dedede;  color: #d63031;margin-top: 20px;">
+          <input id="call" name="Contact No" placeholder="Contact No" type="text" style="padding-left: 48px; border-radius: 0px; background-color: #dedede;  color: #d63031;margin-top: 20px;" pattern="[1-9]{1}[0-9]{9}">
           <i class="fa fa-envelope icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
           <input id="email" name="Email" placeholder="Email" type="text" style="border-radius: 0px; padding-left: 48px; background-color: #dedede;  color: #d63031; margin-top: 20px;" placeholder="Name" type="text">
           
-          <button href="javascript:%20check_empty()" id="submit" class="rounded" style="margin-top: 25px; background-color: #e74c3c; ">Send</a>
+          <button href="javascript:%20check_empty()" id="submit" class="rounded" style="margin-top: 25px; background-color: #e74c3c;" >Send</a>
           </form> </div>
           </div>
           <!-- Popup Div Ends Here -->
@@ -635,7 +634,7 @@
                         <input type="text" id="name" name="Name" />
 
                         <label for="contact">Phone Number</label>
-                        <input type="text" id="email" name="Phone Number" />
+                        <input type="text" id="email" name="Phone Number" pattern="[1-9]{1}[0-9]{9}" />
 
                         <label for="email">Email</label>
                         <input type="text" id="subject" name="Email" />
@@ -913,6 +912,30 @@ document.getElementById('abc').style.display = "none";
 document.getElementById('header-hero-container').style.display = "block";
 document.getElementById('properties').style.display="block";
 }
+
+function val()
+{
+  if(call.value==""){
+    alert("Please enter the phone number");
+    call.focus();
+    return false;
+  }
+
+if(isNaN(call.value))
+{
+  alert("Invalid phone number");
+  call.focus();
+  return false;
+}
+if((frm.phone.value).length < 10)
+{
+  alert("Phone number should be minimum 10 digits");
+  call.focus();
+  return false;
+}
+return true;
+}
+
 
 
     </script>
