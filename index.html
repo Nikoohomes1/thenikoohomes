@@ -25,13 +25,9 @@
   gtag('config', 'UA-214459088-1');
 gtag('config', 'AW-10817686870');
 </script>
-<script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-10817686870/32vYCOyXmogDENaao6Yo',
-      'value': 1.0,
-      'currency': 'INR'
-  });
-</script>
+
+
+
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="css/styles.css" type="text/css" rel="Stylesheet" />
@@ -908,6 +904,12 @@ if ((document.getElementById('name').value=="") || (document.getElementById('cal
 }
 else {
 document.getElementById('error').textContent = "";
+gtag('event', 'conversion', {
+      'send_to': 'AW-10817686870/32vYCOyXmogDENaao6Yo',
+      'value': 1.0,
+      'currency': 'INR'
+  });
+
   return true;
 }
 }
@@ -922,6 +924,11 @@ if ((document.getElementById('name1').value=="") || (document.getElementById('ca
 }
 else {
 document.getElementById('error').textContent = "";
+gtag('event', 'conversion', {
+      'send_to': 'AW-10817686870/32vYCOyXmogDENaao6Yo',
+      'value': 1.0,
+      'currency': 'INR'
+  });
   return true;
 }
 }
