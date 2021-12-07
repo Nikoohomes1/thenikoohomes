@@ -69,7 +69,7 @@ gtag('config', 'AW-10817686870');
         <a  style="cursor: pointer;" id="close"  onclick ="div_hide()" >X</a>
       </div>
       <h1 style=" margin-top: 15px;font-size: 26px; font-family: 'Nunito',sans-serif; font-weight: 600;" > Express your interest </h1>
-        <form style="border: 0px;" action="https://formsubmit.co/af10f9c95ca6c96ad39357a0090f22c2" method="post" name="form2"  >
+        <form style="border: 0px;" action="javascript:sendmail()" method="post" name="form2"  >
         
         <div class="input-icons" style="margin-top: 05px;">
         <i class="fa fa-user icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
@@ -79,7 +79,7 @@ gtag('config', 'AW-10817686870');
         <i class="fa fa-envelope icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
         <input id="email" name="email" placeholder="Email" type="text" style="border-radius: 0px; padding-left: 48px; background-color: #dedede;  color: #d63031; margin-top: 20px;" placeholder="Name" type="text">
         <span id="error"></span>
-        <button  id="submit" class="rounded" style="margin-top: 25px; background-color: #e74c3c;"  onclick=" return check_empty()">Send</a>
+        <button  id="submit" class="rounded" style="margin-top: 25px; background-color: #e74c3c;"  >Send</a>
         </form>
         </div>
         </div>
@@ -97,7 +97,7 @@ gtag('config', 'AW-10817686870');
           <a  style="cursor: pointer;" id="close"  onclick ="div_hide1()" >X</a>
         </div>
         <h1 style=" margin-top: 15px;font-size: 26px; font-family: 'Nunito',sans-serif; font-weight: 600;" > Express your interest </h1>
-        <form style="border: 0px;" action="https://formsubmit.co/thenikoohomes@gmail.com" method="post"  >
+        <form style="border: 0px;" action="javascript:sendmail1()" method="post"  >
           <div class="input-icons" style="margin-top: 05px;">
           <i class="fa fa-user icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
           <input id="name1" name="Name" class="input-field" style="border-radius: 0px; padding-left: 48px; background-color: #dedede; color: #d63031; margin-top: 20px;" placeholder="Name" type="text">
@@ -702,6 +702,8 @@ gtag('config', 'AW-10817686870');
 
     
     
+  
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <script>
         $(function () {
@@ -709,7 +711,8 @@ gtag('config', 'AW-10817686870');
             let logo = $('#logo');
             let navMenu = $('#nav-menu');
             let navToggle = $('#nav-toggle');
-
+           
+          'use strict';
            $('#properties-slider').slick({
                 slidesToShow: 4,
                 slidesToScroll: 1,
@@ -903,12 +906,7 @@ if ((document.getElementById('name').value=="") || (document.getElementById('cal
 
 }
 else {
-document.getElementById('error').textContent = "";
-gtag('event', 'conversion', {
-      'send_to': 'AW-10817686870/32vYCOyXmogDENaao6Yo',
-      'value': 1.0,
-      'currency': 'INR'
-  });
+
 
   return true;
 }
@@ -981,6 +979,113 @@ if((frm.phone.value).length < 10)
 }
 return true;
 }
+
+function sendmail(){
+    
+    var name = $('#name').val();
+    var email = $('#email').val();
+    var call = $('#call').val();
+    //var message = $('#Message').val();
+
+    // var body = $('#body').val();
+    var flag = check_empty();
+
+    if(flag == false)
+    {
+       return;
+    }
+    var Body='Name: '+name+'<br>Email: '+email+'<br>Phone No: '+call;
+    //console.log(name, phone, email, message);
+    
+    Email.send({
+      SecureToken:"fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+      To: 'thenikoohomes@gmail.com',
+      From: "referals.nikoohomes@gmail.com",
+      Subject: "New message on contact from "+name,
+      Body: Body
+    }).then(
+      message =>{
+        //console.log (message);
+        if(message=='OK'){
+        alert('Your mail has been send. Thank you for connecting.');
+        div_hide();
+
+        
+
+  gtag('event', 'conversion', {
+      'send_to': 'AW-10817686870/32vYCOyXmogDENaao6Yo',
+      'value': 1.0,
+      'currency': 'INR'
+  });
+
+
+
+
+
+        }
+        else{
+          console.error (message);
+          alert('There is error at sending message. ')
+          
+        }
+      
+      }
+      
+    );
+
+
+
+  }
+
+  function sendmail1(){
+    
+    var name = $('#name1').val();
+    var email = $('#email1').val();
+    var call = $('#call1').val();
+    //var message = $('#Message').val();
+
+    // var body = $('#body').val();
+    var flag = check_empty1();
+
+    if(flag == false)
+    {
+       return;
+    }
+    var Body='Name: '+name+'<br>Email: '+email+'<br>Phone No: '+call;
+    //console.log(name, phone, email, message);
+    
+    Email.send({
+      SecureToken:"fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+      To: 'thenikoohomes@gmail.com',
+      From: "technodroid.15@gmail.com",
+      Subject: "New message on contact from "+name,
+      Body: Body
+    }).then(
+      message =>{
+        //console.log (message);
+        if(message=='OK'){
+        alert('Your mail has been send. Thank you for connecting.');
+        div_hide1();
+        gtag('event', 'conversion', {
+      'send_to': 'AW-10817686870/32vYCOyXmogDENaao6Yo',
+      'value': 1.0,
+      'currency': 'INR'
+  });
+        
+        }
+        else{
+          console.error (message);
+          alert('There is error at sending message. ')
+          
+        }
+      
+      }
+      
+    );
+
+
+
+  }
 
 
 
