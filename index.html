@@ -1056,13 +1056,15 @@ function sendmail(){
     //console.log(name, phone, email, message);
     
     Email.send({
-      Host: "smtp.yourisp.com",
+      Host: "smtp.elasticemail.com",
       Username: "thenikoohomes@gmail.com",
       Password: "D3DBBCB06CA7625EA5046F20A41246B10F60",
-
+      Port: 2525,
       SecureToken:"2d34bd11-efbd-4c3c-8cbb-8eb86a4afc59",
-      To: 'thenikoohomes@gmail.com',
-      From: "technodroid.15@gmail.com",
+      To: 'saswatamajumdar3@gmail.com',
+      From: 'thenikoohomes@gmail.com',
+      //From: 'referrals.nikoohomes@elasticemail.com',
+      //From: "referals.nikoohomes@gmail.com",
       Subject: "New message on contact from "+name,
       Body: Body
     }).then(
