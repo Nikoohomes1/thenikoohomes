@@ -997,7 +997,8 @@ function sendmail(){
     //console.log(name, phone, email, message);
     
     Email.send({
-      SecureToken:"fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+      SecureToken:"2d34bd11-efbd-4c3c-8cbb-8eb86a4afc59",
+      //SecureToken:"fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
       To: 'thenikoohomes@gmail.com',
       From: "referals.nikoohomes@gmail.com",
       Subject: "New message on contact from "+name,
@@ -1006,8 +1007,6 @@ function sendmail(){
       message =>{
         //console.log (message);
         if(message=='OK'){
-
-        
         div_hide();
         window.location.href="file.html";
 
