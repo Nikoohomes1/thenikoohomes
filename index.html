@@ -61,6 +61,10 @@ gtag('config', 'AW-10817686870');
 <i  class="fa fa-whatsapp my-float"></i>
 </a>
 
+<a id="whatsapp_float" href="tel:+919741202106" class="float2" target="_blank">
+<i  class="fa fa-whatsapp my-float2"></i>
+</a>
+
 
   
 
@@ -75,17 +79,36 @@ gtag('config', 'AW-10817686870');
         <a  style="cursor: pointer;" id="close"  onclick ="div_hide()" >X</a>
       </div>
       <h1 style=" margin-top: 15px;font-size: 26px; font-family: 'Nunito',sans-serif; font-weight: 600;" > Express your interest </h1>
-        <form style="border: 0px;" action="javascript:sendmail()" method="post" name="form2"  >
+                <form action="submit.php" method="post" onsubmit="return valid();" name="Query" id="contact_form" pix-confirm="hidden_pix_15"><input name="campaignid" type="hidden" value="2634541" /><input type="hidden" name="af5" value="" />
+        <!-- <form style="border: 0px;" action="javascript:sendmail()" method="post" name="form2"  > -->
         
         <div class="input-icons" style="margin-top: 05px;">
         <i class="fa fa-user icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
-        <input id="name"class="input-field" name="Name" style="border-radius: 0px; padding-left: 48px; background-color: #dedede; color: #d63031; margin-top: 20px;" placeholder="Name" type="text" >
-        <i class="fa fa-phone icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px; padding-left: 10px; transform: rotate(180deg);"></i>
-        <input id="call"  name="Contactno"  pattern="[1-9]{1}[0-9]{9}" placeholder="Contact No" type="text" style="padding-left: 48px; border-radius: 0px; background-color: #dedede;  color: #d63031;margin-top: 20px;" >
+        
+        <input class="input-field" name="name" style="border-radius: 0px; padding-left: 48px; background-color: #dedede; color: #d63031; margin-top: 20px;" placeholder="Name" type="text" >
+
+        <i class="fa fa-phone icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
+        <input   name="mobile"  pattern="[1-9]{1}[0-9]{9}" placeholder="Contact No" type="tel" style="border-radius: 0px;
+    padding-left: 49px;
+    background-color: #dedede;
+    color: #d63031;
+    margin-top: 20px;
+    height: 49px;
+    width: 276px;" >
+
+
         <i class="fa fa-envelope icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
-        <input id="email" name="email" placeholder="Email" type="text" style="border-radius: 0px; padding-left: 48px; background-color: #dedede;  color: #d63031; margin-top: 20px;" placeholder="Name" type="text">
+        <input  name="email" placeholder="Email" type="email" style="border-radius: 0px;
+    padding-left: 48px;
+    background-color: #dedede;
+    color: #d63031;
+    margin-top: 20px;
+    height: 48px;
+    width: 276px;" placeholder="Name" type="text">
+
+
         <span id="error"></span>
-        <button  id="submit" class="rounded" style="margin-top: 25px; background-color: #e74c3c;"  >Send</a>
+        <button  name="submit" type="submit" class="rounded" style="margin-top: 25px; background-color: #e74c3c;"  >Send</a>
         </form>
         </div>
         </div>
@@ -99,21 +122,43 @@ gtag('config', 'AW-10817686870');
           <div id="popupContact">
           <!-- Contact Us Form -->
           <div class="flex">
-          <img id = "popup_logo" src="floor_images/leela_logo1.png" style="margin-top: -10px; max-width: 110px; margin-left: 30%; margin-right: 30%;justify-items: center; ">
+          <img id = "popup_logo" src="logo.png" style="margin-top: -10px; max-width: 110px; margin-left: 30%; margin-right: 30%;justify-items: center; ">
           <a  style="cursor: pointer;" id="close"  onclick ="div_hide1()" >X</a>
         </div>
         <h1 style=" margin-top: 15px;font-size: 26px; font-family: 'Nunito',sans-serif; font-weight: 600;" > Express your interest </h1>
-        <form style="border: 0px;" action="javascript:sendmail1()" method="post"  >
-          <div class="input-icons" style="margin-top: 05px;">
-          <i class="fa fa-user icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
-          <input id="name1" name="Name" class="input-field" style="border-radius: 0px; padding-left: 48px; background-color: #dedede; color: #d63031; margin-top: 20px;" placeholder="Name" type="text">
-          <i class="fa fa-phone icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px; padding-left: 10px; transform: rotate(180deg);"></i>
-          <input id="call1" name="ContactNo" placeholder="Contact No" type="text" style="padding-left: 48px; border-radius: 0px; background-color: #dedede;  color: #d63031;margin-top: 20px;" pattern="[1-9]{1}[0-9]{9}">
-          <i class="fa fa-envelope icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
-          <input id="email1" name="Email" placeholder="Email" type="text" style="border-radius: 0px; padding-left: 48px; background-color: #dedede;  color: #d63031; margin-top: 20px;" placeholder="Name" type="text">
-          <span id="error1"></span>
-          <button id="submit" class="rounded" style="margin-top: 25px; background-color: #e74c3c;" onclick="return check_empty1()"  >Send</a>
-          </form> </div>
+          <form action="submit.php" method="post" onsubmit="return valid();" name="Query" id="contact_form" pix-confirm="hidden_pix_15"><input name="campaignid" type="hidden" value="2634541" /><input type="hidden" name="af5" value="" />
+        <!-- <form style="border: 0px;" action="javascript:sendmail()" method="post" name="form2"  > -->
+        
+        <div class="input-icons" style="margin-top: 05px;">
+        <i class="fa fa-user icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
+        
+        <input class="input-field" name="name" style="border-radius: 0px; padding-left: 48px; background-color: #dedede; color: #d63031; margin-top: 20px;" placeholder="Name" type="text" >
+
+        <i class="fa fa-phone icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
+        <input   name="mobile"  pattern="[1-9]{1}[0-9]{9}" placeholder="Contact No" type="tel" style="border-radius: 0px;
+    padding-left: 49px;
+    background-color: #dedede;
+    color: #d63031;
+    margin-top: 20px;
+    height: 49px;
+    width: 276px;" >
+
+
+        <i class="fa fa-envelope icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
+        <input  name="email" placeholder="Email" type="email" style="border-radius: 0px;
+    padding-left: 48px;
+    background-color: #dedede;
+    color: #d63031;
+    margin-top: 20px;
+    height: 48px;
+    width: 276px;" placeholder="Name" type="text">
+
+
+        <span id="error"></span>
+        <button  name="submit" type="submit" class="rounded" style="margin-top: 25px; background-color: #e74c3c;"  >Send</a>
+        </form>
+
+           </div>
           </div>
           <!-- Popup Div Ends Here -->
           </div>
@@ -648,20 +693,19 @@ gtag('config', 'AW-10817686870');
 
                 <div id="form-container" >
                     <h3 style="color:#e74c3c; font-weight:  700; font-family: 'Nunito',sans-serif;  font-size: 24px;">Have Any Queries ?</h3>
-                    <form action="https://formsubmit.co/thenikoohomes@gmail.com" method="POST" style="width: 100%; max-width: 990px;" name="form2" onsubmit="required()" >
+                     <form action="submit.php" method="post" onsubmit="return valid();" name="Query" id="contact_form" pix-confirm="hidden_pix_15"><input name="campaignid" type="hidden" value="2634541" /><input type="hidden" name="af5" value="" />
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="Name"/>
+                        <input type="text" required="" name="name"/>
 
                         <label for="contact">Phone Number</label>
-                        <input type="text" id="email" name="Phone Number" pattern="[1-9]{1}[0-9]{9}" name="Phoneno"/>
+                        <input type="tel"  name="mobile" required="" />
 
                         <label for="email">Email</label>
-                        <input type="text" id="subject" name="Email" />
+                        <input type="email" required="" name="email" />
 
-                        <label for="message">Message</label>
-                        <textarea id="message" placeholder="Write your message here.." name="Message"></textarea>
+                       <br>
 
-                        <button class="rounded" style=" background-color: #e74c3c;padding: 10px;">Send Message</buttom>
+                        <button name="submit" name="submit" class="rounded" style=" background-color: #e74c3c;padding: 10px;">Send Message</buttom>
                     </form>
                 </div>
 
