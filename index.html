@@ -5,18 +5,13 @@
   <title>Nikoo Homes</title>
   <link rel="stylesheet" href="./style.css">
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NIKOO HOMES</title>
 
-    
+  <link rel="icon" href="favicon.png" type="favicon.png" sizes="16x16">  
 
 
     <script src="https://smtpjs.com/v3/smtp.js"></script> 
@@ -62,7 +57,7 @@ gtag('config', 'AW-10817686870');
 </a>
 
 <a id="whatsapp_float" href="tel:+919741202106" class="float2" target="_blank">
-<i  class="fa fa-whatsapp my-float2"></i>
+<i  class="fa fa-phone my-float2"></i>
 </a>
 
 
@@ -79,16 +74,16 @@ gtag('config', 'AW-10817686870');
         <a  style="cursor: pointer;" id="close"  onclick ="div_hide()" >X</a>
       </div>
       <h1 style=" margin-top: 15px;font-size: 26px; font-family: 'Nunito',sans-serif; font-weight: 600;" > Express your interest </h1>
-                <form action="submit.php" method="post" onsubmit="return valid();" name="Query" id="contact_form" pix-confirm="hidden_pix_15"><input name="campaignid" type="hidden" value="2634541" /><input type="hidden" name="af5" value="" />
-        <!-- <form style="border: 0px;" action="javascript:sendmail()" method="post" name="form2"  > -->
+               <!--  <form action="submit.php" method="post" onsubmit="return valid();" name="Query" id="contact_form" pix-confirm="hidden_pix_15"><input name="campaignid" type="hidden" value="2634541" /><input type="hidden" name="af5" value="" /> -->
+        <form method="post" autocomplete="off" name="google-sheet">
         
         <div class="input-icons" style="margin-top: 05px;">
         <i class="fa fa-user icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
         
-        <input class="input-field" name="name" style="border-radius: 0px; padding-left: 48px; background-color: #dedede; color: #d63031; margin-top: 20px;" placeholder="Name" type="text" >
+        <input class="input-field" name="Name" style="border-radius: 0px; padding-left: 48px; background-color: #dedede; color: #d63031; margin-top: 20px;" placeholder="Name" type="text" >
 
         <i class="fa fa-phone icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
-        <input   name="mobile"  pattern="[1-9]{1}[0-9]{9}" placeholder="Contact No" type="tel" style="border-radius: 0px;
+        <input   name="Phone"  pattern="[1-9]{1}[0-9]{9}" placeholder="Contact No" type="tel" style="border-radius: 0px;
     padding-left: 49px;
     background-color: #dedede;
     color: #d63031;
@@ -98,7 +93,7 @@ gtag('config', 'AW-10817686870');
 
 
         <i class="fa fa-envelope icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
-        <input  name="email" placeholder="Email" type="email" style="border-radius: 0px;
+        <input  name="Email" placeholder="Email" type="email" style="border-radius: 0px;
     padding-left: 48px;
     background-color: #dedede;
     color: #d63031;
@@ -126,16 +121,16 @@ gtag('config', 'AW-10817686870');
           <a  style="cursor: pointer;" id="close"  onclick ="div_hide1()" >X</a>
         </div>
         <h1 style=" margin-top: 15px;font-size: 26px; font-family: 'Nunito',sans-serif; font-weight: 600;" > Express your interest </h1>
-          <form action="submit.php" method="post" onsubmit="return valid();" name="Query" id="contact_form" pix-confirm="hidden_pix_15"><input name="campaignid" type="hidden" value="2634541" /><input type="hidden" name="af5" value="" />
-        <!-- <form style="border: 0px;" action="javascript:sendmail()" method="post" name="form2"  > -->
+          <!-- <form action="submit.php" method="post" onsubmit="return valid();" name="Query" id="contact_form" pix-confirm="hidden_pix_15"><input name="campaignid" type="hidden" value="2634541" /><input type="hidden" name="af5" value="" /> -->
+        <form method="post" autocomplete="off" name="google-sheet-2">
         
         <div class="input-icons" style="margin-top: 05px;">
         <i class="fa fa-user icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
         
-        <input class="input-field" name="name" style="border-radius: 0px; padding-left: 48px; background-color: #dedede; color: #d63031; margin-top: 20px;" placeholder="Name" type="text" >
+        <input class="input-field" name="Name" style="border-radius: 0px; padding-left: 48px; background-color: #dedede; color: #d63031; margin-top: 20px;" placeholder="Name" type="text" >
 
         <i class="fa fa-phone icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
-        <input   name="mobile"  pattern="[1-9]{1}[0-9]{9}" placeholder="Contact No" type="tel" style="border-radius: 0px;
+        <input   name="Phone"  pattern="[1-9]{1}[0-9]{9}" placeholder="Contact No" type="tel" style="border-radius: 0px;
     padding-left: 49px;
     background-color: #dedede;
     color: #d63031;
@@ -145,7 +140,7 @@ gtag('config', 'AW-10817686870');
 
 
         <i class="fa fa-envelope icon" style="margin-top: 22px; padding-top: 14px; padding-bottom: 16px;padding-left: 10px;"></i>
-        <input  name="email" placeholder="Email" type="email" style="border-radius: 0px;
+        <input  name="Email" placeholder="Email" type="email" style="border-radius: 0px;
     padding-left: 48px;
     background-color: #dedede;
     color: #d63031;
@@ -181,7 +176,7 @@ gtag('config', 'AW-10817686870');
                     </button>
 
                     <ul id="nav-menu" style="margin-top: 15px;">
-                        <li><a href="#hero1" style="font-size: 22px; font-family: 'Nunito',sans-serif; font-weight: 600;" >Home</a></li>
+                        <li><a href="#hero" style="font-size: 22px; font-family: 'Nunito',sans-serif; font-weight: 600;" >Home</a></li>
                         <li><a href="#properties" style="font-size: 20px; font-family: 'Nunito',sans-serif; font-weight: 600;">Floor Plan</a></li>
                         <li><a href="#table" style="font-size: 20px; font-family: 'Nunito',sans-serif; font-weight: 600;">Pricing</a></li>
                         <li><a href="#amentities"style="font-size: 20px; font-family: 'Nunito',sans-serif; font-weight: 600;">Amenities</a></li>
@@ -683,7 +678,7 @@ gtag('config', 'AW-10817686870');
                     </address>
 
                     <label style="color:tomato; font-weight:  700; font-family: 'Nunito',sans-serif;  font-size: 20px;">Phone</label>
-                    <a href="#" style="color:black; font-weight:  600; font-family: 'Nunito',sans-serif;  font-size: 16px;">9741202106</a>
+                    <a href="tel:+919741202106" style="color:black; font-weight:  600; font-family: 'Nunito',sans-serif;  font-size: 16px;">9741202106</a>
 
                     <label style="color:tomato; font-weight:  700; font-family: 'Nunito',sans-serif;  font-size: 20px;">RERA Registration Number : </label>
                     <a href="#" style="color:black; font-weight:  600; font-family: 'Nunito',sans-serif;  font-size: 16px;">PRM/KA/RERA/1251/472/<br>PR/210731/004208</a>
@@ -693,15 +688,16 @@ gtag('config', 'AW-10817686870');
 
                 <div id="form-container" >
                     <h3 style="color:#e74c3c; font-weight:  700; font-family: 'Nunito',sans-serif;  font-size: 24px;">Have Any Queries ?</h3>
-                     <form action="submit.php" method="post" onsubmit="return valid();" name="Query" id="contact_form" pix-confirm="hidden_pix_15"><input name="campaignid" type="hidden" value="2634541" /><input type="hidden" name="af5" value="" />
+                   <!--   <form action="submit.php" method="post" onsubmit="return valid();" name="Query" id="contact_form" pix-confirm="hidden_pix_15"><input name="campaignid" type="hidden" value="2634541" /><input type="hidden" name="af5" value="" /> -->
+                    <form method="post" autocomplete="off" name="google-sheet-3">
                         <label for="name">Name</label>
-                        <input type="text" required="" name="name"/>
+                        <input type="text" required="" name="Name"/>
 
                         <label for="contact">Phone Number</label>
-                        <input type="tel"  name="mobile" required="" />
+                        <input type="tel"  name="Phone" required="" />
 
                         <label for="email">Email</label>
-                        <input type="email" required="" name="email" />
+                        <input type="email" required="" name="Email" />
 
                        <br>
 
@@ -716,8 +712,8 @@ gtag('config', 'AW-10817686870');
 
     <div style="background-color: black;color: white;  padding: 15px; margin-top: -30px;">
           <p style="text-align:center;line-height: 1.2rem;">
-            Disclaimer :
-            The content is for information purposes only and does not constitute an offer to avail of any service. Prices mentioned are subject to change without notice and properties mentioned are subject to availability. Images for representation purposes only. This is the official website of authorized marketing partner. We may also send updates to the mobile number/email id registered with us. All Rights Reserved.
+            This site is for information purpose only and should not be treated as the official information.<br>
+Digital Media Planned by: <a href="http://digitalrubix.com/"><b>Digital Rubix</b></a> | <a href="disclaimer.html" target="_blank"><b>Disclaimer & Privacy Policy</b></a>
           </p>
     </div>
 
@@ -1002,148 +998,57 @@ document.getElementById('header-hero-container').style.display = "block";
 document.getElementById('properties').style.display="block";
 }
 
-function val()
-{
-  if(call.value==""){
-    alert("Please enter the phone number");
-    call.focus();
-    return false;
-  }
-
-if(isNaN(call.value))
-{
-  alert("Invalid phone number");
-  call.focus();
-  return false;
-}
-if((frm.phone.value).length < 10)
-{
-  alert("Phone number should be minimum 10 digits");
-  call.focus();
-  return false;
-}
-return true;
-}
-
-function sendmail(){
-    
-    var name = $('#name').val();
-    var email = $('#email').val();
-    var call = $('#call').val();
-
-    
-    //var message = $('#Message').val();
-
-    // var body = $('#body').val();
-    var flag = check_empty();
-
-    if(flag == false)
-    {
-       return;
-    }
-    var Body='Name: '+name+'<br>Email: '+email+'<br>Phone No: '+call;
-    //console.log(name, phone, email, message);
-    
-    Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "thenikoohomes@gmail.com",
-      Password: "D3DBBCB06CA7625EA5046F20A41246B10F60",
-      Port: 2525,
-      SecureToken:"2d34bd11-efbd-4c3c-8cbb-8eb86a4afc59",
-      To: 'thenikoohomes@gmail.com',
-      From: 'thenikoohomes@gmail.com',
-      //From: 'referrals.nikoohomes@elasticemail.com',
-      //From: "referals.nikoohomes@gmail.com",
-      Subject: "New message on contact from "+name,
-      Body: Body
-    }).then(
-      message =>{
-        //console.log (message);
-        if(message=='OK'){
-        div_hide();
-        window.location.href="file.html";
-
-      }
-        else{
-          console.error (message);
-          alert('There is error at sending message.');
-          
-          
-        }
-      
-      }
-      
-    );
 
 
 
-  }
-
-  function sendmail1(){
-
-   
-
-    
-    var name = $('#name1').val();
-    var email = $('#email1').val();
-    var call = $('#call1').val();
-    //var message = $('#Message').val();
-
-    // var body = $('#body').val();
-    var flag = check_empty1();
-
-    if(flag == false)
-    {
-       return;
-    }
-    var Body='Name: '+name+'<br>Email: '+email+'<br>Phone No: '+call;
-    //console.log(name, phone, email, message);
-    
-    Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "thenikoohomes@gmail.com",
-      Password: "D3DBBCB06CA7625EA5046F20A41246B10F60",
-      Port: 2525,
-      SecureToken:"2d34bd11-efbd-4c3c-8cbb-8eb86a4afc59",
-      To: 'thenikoohomes@gmail.com',
-      From: 'thenikoohomes@gmail.com',
-      //From: 'referrals.nikoohomes@elasticemail.com',
-      //From: "referals.nikoohomes@gmail.com",
-      Subject: "New message on contact from "+name,
-      Body: Body
-    }).then(
-      message =>{
-        //console.log (message);
-        if(message=='OK'){
-
-        
-        div_hide1();
-        window.location.href="file.html"
-      
-
-        
-        
-      
-
-        
-        }
-        else{
-          console.error (message);
-          alert('There is error at sending message. ')
-          
-        }
-      
-      }
-      
-    );
-
-
-
-  }
-
+ 
 
 
     </script>
+
+
+ <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycby_VDaluc58zxZBAYWxT6sCQJkPPPk-FXUZXGqENtjs9Vsbd6SuIWPfKPjoi02eEWxV/exec'
+
+            const form = document.forms['google-sheet'];
+
+            console.log(form);
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+          
+          <script>
+            const scriptURL2 = 'https://script.google.com/macros/s/AKfycby_VDaluc58zxZBAYWxT6sCQJkPPPk-FXUZXGqENtjs9Vsbd6SuIWPfKPjoi02eEWxV/exec'
+             const form2 = document.forms['google-sheet-2']
+          
+          
+            form2.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL2, { method: 'POST', body: new FormData(form2)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+          
+          <script>
+            const scriptURL3 = 'https://script.google.com/macros/s/AKfycby_VDaluc58zxZBAYWxT6sCQJkPPPk-FXUZXGqENtjs9Vsbd6SuIWPfKPjoi02eEWxV/exec'
+             const form3 = document.forms['google-sheet-3']
+          
+          
+            form3.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL3, { method: 'POST', body: new FormData(form3)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+
 </body>
 </html>
 <!-- partial -->
